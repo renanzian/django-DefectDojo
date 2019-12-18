@@ -423,6 +423,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.humanize',
     'gunicorn',
+    'django_mfa', #custom mfa
     'tastypie',
     'auditlog',
     'dojo',
@@ -452,6 +453,7 @@ DJANGO_MIDDLEWARE_CLASSES = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django_mfa.middleware.MfaMiddleware', #custom mfa
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'dojo.middleware.LoginRequiredMiddleware',
