@@ -6,7 +6,7 @@ from dojo.models import Finding
 class TruffleHogJSONParser(object):
     def __init__(self, filename, test):
 
-        data = filename.read()
+        data = filename.read().decode('utf-8')
         self.dupes = dict()
         self.items = ()
 
